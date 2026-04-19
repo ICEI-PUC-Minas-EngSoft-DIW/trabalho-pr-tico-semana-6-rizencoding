@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(to bottom,
         #1a1a2e 0%,
@@ -9,20 +13,21 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
 
-main{
+main {
     flex: 1;
 }
 
 header {
-        background: linear-gradient(135deg, 
-        rgba(26, 26, 46, 0.85), 
+    background: linear-gradient(135deg,
+        rgba(26, 26, 46, 0.85),
         rgba(142, 68, 173, 0.5)
     );
-    backdrop-filter: blur(8px); /* efeito vidro fosco */
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(231, 108, 47, 0.4);
     box-shadow: 0 2px 20px rgba(231, 108, 47, 0.2);
     padding: 15px 0;
@@ -32,38 +37,34 @@ header {
 .header-container {
     width: 100%;
     padding: 0 20px;
-    box-sizing: border-box;
 }
 
-input{
-    padding: 10px 15px;
-    width: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(231, 108, 47, 0.5);
-    border-radius: 8px 0 0 8px;
-    color: #f0c27f;
-    outline: none;
+input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(231, 108, 47, 0.5) !important;
+    color: #f0c27f !important;
     backdrop-filter: blur(4px);
 }
- .barra-busca button {
+
+.barra-busca button {
     padding: 10px 15px;
     background: rgba(231, 108, 47, 0.6);
     border: 1px solid rgba(231, 108, 47, 0.5);
-    border-radius: 0 8px 8px 0;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(4px);
 }
+
 .barra-busca button:hover {
     background: #e96c2f;
     box-shadow: 0 0 15px rgba(231, 108, 47, 0.5);
 }
 
-
+/* correção das imagens esticadas */
 .imagem {
-    width: min(500px, 90vw);
-    height: 400px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     border: 2px solid black;
     overflow: hidden;
 }
@@ -72,6 +73,7 @@ input{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 h1 {
@@ -80,6 +82,9 @@ h1 {
     color: #f0c27f !important;
 }
 
+p {
+    color: #f0c27f;
+}
 
 .botao {
     border: 1px solid rgba(231, 108, 47, 0.7);
@@ -106,7 +111,7 @@ h1 {
     box-shadow: 0 0 20px rgba(231, 108, 47, 0.4);
 }
 
-header a{
+header a {
     text-decoration: none;
     color: black;
 }
@@ -119,28 +124,11 @@ footer {
     backdrop-filter: blur(8px);
     border-top: 1px solid rgba(231, 108, 47, 0.4);
     color: #f0c27f;
-    padding: 15px 20px;
-    width: 100%;
-    box-sizing: border-box;
     width: 100%;
     font-size: larger;
-
 }
 
-p {
-        color: #f0c27f;
-}
-
-@media (max-width: 900px){
-    .imagem {
-        width: 350px;
-        height: 280px;
-    }
-}
-
-@media (max-width: 600px){
-    .imagem {
-        width: 90vw;
-        height: 220px;
-    }
+footer a {
+    color: #f0c27f;
+    text-decoration: none;
 }

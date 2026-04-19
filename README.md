@@ -8,14 +8,15 @@ No trabalho dessa semana vamos alterar o projeto para que a responsividade da ho
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Rafael Felipe Oliveira
+- Matricula: 928422
+- Proposta de projeto escolhida: Agência de turismo
+- Breve descrição sobre seu projeto: Agência de turismo que realiza a venda de pacotes de excursão para o público.
 
 ## Print da versão responsiva com Bootstrap [DESKTOP]
 
 <<  COLOQUE A IMAGEM AQUI >>
+![Desktop responsivo]()
 
 ## Print da versão responsiva com Bootstrap [MOBILE] (*)
 
