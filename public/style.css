@@ -1,0 +1,200 @@
+body {
+    background: linear-gradient(to bottom,
+        #1a1a2e 0%,
+        #c0392b 50%,
+        #8e44ad 80%,
+        #2c3e7a 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    flex: 1;
+}
+
+header {
+        background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.85), 
+        rgba(142, 68, 173, 0.5)
+    );
+    backdrop-filter: blur(8px); /* efeito vidro fosco */
+    border-bottom: 1px solid rgba(231, 108, 47, 0.4);
+    box-shadow: 0 2px 20px rgba(231, 108, 47, 0.2);
+    position: relative;
+    padding: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.header-container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input{
+    padding: 10px 15px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(231, 108, 47, 0.5);
+    border-radius: 8px 0 0 8px;
+    color: #f0c27f;
+    outline: none;
+    backdrop-filter: blur(4px);
+}
+ .barra-busca button {
+    padding: 10px 15px;
+    background: rgba(231, 108, 47, 0.6);
+    border: 1px solid rgba(231, 108, 47, 0.5);
+    border-radius: 0 8px 8px 0;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+.barra-busca button:hover {
+    background: #e96c2f;
+    box-shadow: 0 0 15px rgba(231, 108, 47, 0.5);
+}
+
+.barra-busca{
+    display: flex;
+    gap: 5px;
+}
+
+.card{
+    text-align: center;
+}
+
+.imagem {
+    width: min(500px, 90vw);
+    height: 400px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #f0c27f;
+}
+
+
+.botao {
+    border: 1px solid rgba(231, 108, 47, 0.7);
+    color: #f0c27f;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.botao-destaque {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.botao:hover {
+    background: rgba(231, 108, 47, 0.3);
+    border-color: #e96c2f;
+    color: white;
+    box-shadow: 0 0 20px rgba(231, 108, 47, 0.4);
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    background: linear-gradient(135deg,
+        rgba(26, 26, 46, 0.95),
+        rgba(44, 62, 122, 0.95)
+    );
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(231, 108, 47, 0.4);
+    color: #f0c27f;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: larger;
+
+}
+
+p {
+        color: #f0c27f;
+}
+
+@media (max-width: 900px){
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .imagem {
+        width: 350px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .header-container{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu nav {
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        gap: 8px;
+    }
+
+    .barra-busca {
+        width: 100%;
+    }
+
+    .barra-busca input{
+        flex: 1;
+        width: auto;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem {
+        width: 90vw;
+        height: 220px;
+    }
+}
